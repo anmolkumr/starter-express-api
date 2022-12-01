@@ -1,0 +1,136 @@
+footer {
+  background-color: #112243;
+  color: white;
+  display: grid;
+  height: auto;
+  padding: 20px 70px 20px 70px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 12px;
+  box-shadow: 0 -30px #162d58, 0 -60px #1b3668;
+  align-items: center;
+}
+
+.footer-shadow {
+  width: 100vw;
+  height: 60px;
+}
+
+.campfire {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.campfire > img {
+  max-block-size: 300px;
+}
+
+/* .socials {
+  margin: 0% 4%;
+} */
+
+.socials,
+.app,
+.navigate {
+  justify-self: center;
+}
+
+.navigate,
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-20 {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media {
+  /* margin: 15%; */
+  transform: scale(0.95);
+  /* margin-right: 17px; */
+  margin: 10px;
+  width: 48px;
+}
+
+.social-media:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
+
+.navigate li {
+  color: white;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.navigate h3,
+.socials h3,
+.app h3 {
+  margin-bottom: 15px;
+  color: rgb(152, 228, 244);
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    grid-template-columns: 0.75fr 1.25fr;
+    grid-template-rows: 1fr 1.8fr 1.8fr;
+    padding: 10px 10px 20px 10px;
+    /* max-height: 600px; */
+    box-shadow: 0 -15px #162d58, 0 -30px #1b3668;
+  }
+
+  .footer-shadow {
+    height: 30px;
+  }
+
+  .campfire {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-end: 4;
+  }
+
+  .campfire > img {
+    max-width: 50vw;
+    /* max-block-size: 300px; */
+    position: relative;
+    bottom: -150px;
+    width: 60vw;
+  }
+
+  .socials {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    margin: 0;
+  }
+
+  .navigate {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    /* grid-row-end: 3; */
+  }
+
+  .app {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+
+  .socials,
+  .navigate,
+  .app {
+    justify-self: left;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  footer a li {
+    display: inline-block;
+  }
+}

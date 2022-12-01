@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Blithchron '23</title>
+    <meta name="description" content="Blithchron'23 website" />
+    <meta property="og:title" content="Blithchron'23 | IIT Gandhinagar" />
+    <meta property="og:description" content="Blithchron'23 website" />
+    <meta property="og:image" content="assets/logo.png"/>
+    <meta property="og:url" content="index.html" />
+    <meta property="og:site_name" content="Blithchron'23" />
+  <link rel="stylesheet" href="./style/events.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav id="navbar">
+      <div class="logo"></div>
+      <ul class="nav" id="nav">
+        <li class="menu-item"><a href="index.html" class="nav-item">Home</a></li>
+        <li class="menu-item">
+          <a href="events.html" class="active nav-item">Events</a>
+        </li>
+        <li class="menu-item">
+          <a href="coming-soon.html" class="nav-item">Sponsors</a>
+        </li>
+        <li class="menu-item"><a href="team.html" class="nav-item">Team</a></li>
+      </ul>
+      <div class="menu" id="menu" onclick="onClickMenu()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+        <div id="bar4" class="bar"></div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="leftside_bg_img">
+      <div class="sun">
+        <img src="assets/sun.png" alt="" loading="eager">
+      </div>
+      <div class="B-extrochron-div ">
+        <!-- <div class="B"> -->
+        <img src="assets/B.png" alt="" class="B-img">
+        <div class="animation-extrochron">
+          <div class="animation">
+            <img src="assets/ecstocon.png" alt="" class="extrochron-img">
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+      <div class="left-content">
+        <h1 class="main_title">EVENTS</h1>
+        <p class="description">
+          let's face the reality
+        </p>
+      </div>
+    </div>
+    <div class="rightside">
+      <div class="heading">
+        <h2 class="typeanim team-heading">Upcoming Events</h2>
+      </div>
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+      <script type="text/javascript">
+        var my_sheet_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRAPXwEbzMIHrBS5_w-R9x8jnrOrBb6xdWz0bJBMGExFscY2lEK63BUglynRq2nbKvFQgBUADAniYwL/pub?output=csv';
+
+        function init() {
+          Papa.parse(my_sheet_url, {
+            download: true,
+            header: true,
+            complete: showInfo
+          })
+        }
+
+        window.addEventListener('DOMContentLoaded', init)
+
+        function showInfo(results) {
+          var data = results.data
+          console.log(data);
+
+          document.getElementById("ant-head").innerHTML = data[0].Events;
+          document.getElementById("ant-content").innerHTML = data[0].Description;
+          document.getElementById("ant-loc").getAttributeNode("onclick").value = "location.href='" + data[0].Rulebook_Link + "'";
+
+          document.getElementById("eup-head").innerHTML = data[1].Events;
+          document.getElementById("eup-content").innerHTML = data[1].Description;
+          document.getElementById("eup-loc").getAttributeNode("onclick").value = "location.href='" + data[1].Rulebook_Link + "'";
+
+          document.getElementById("lenz-head").innerHTML = data[2].Events;
+          document.getElementById("lenz-content").innerHTML = data[2].Description;
+          document.getElementById("lenz-loc").getAttributeNode("onclick").value = "location.href='" + data[2].Rulebook_Link + "'";
+
+          document.getElementById("nyp-head").innerHTML = data[3].Events;
+          document.getElementById("nyp-content").innerHTML = data[3].Description;
+          document.getElementById("nyp-loc").getAttributeNode("onclick").value = "location.href='" + data[3].Rulebook_Link + "'";
+
+          document.getElementById("pan-head").innerHTML = data[4].Events;
+          document.getElementById("pan-content").innerHTML = data[4].Description;
+          document.getElementById("pan-loc").getAttributeNode("onclick").value = "location.href='" + data[4].Rulebook_Link + "'";
+
+          document.getElementById("qui-head").innerHTML = data[5].Events;
+          document.getElementById("qui-content").innerHTML = data[5].Description;
+          document.getElementById("qui-loc").getAttributeNode("onclick").value = "location.href='" + data[5].Rulebook_Link + "'";
+
+          document.getElementById("skr-head").innerHTML = data[6].Events;
+          document.getElementById("skr-content").innerHTML = data[6].Description;
+          document.getElementById("skr-loc").getAttributeNode("onclick").value = "location.href='" + data[6].Rulebook_Link + "'";
+
+          document.getElementById("rev-head").innerHTML = data[7].Events;
+          document.getElementById("rev-content").innerHTML = data[7].Description;
+          document.getElementById("rev-loc").getAttributeNode("onclick").value = "location.href='" + data[7].Rulebook_Link + "'";
+
+          document.getElementById("solo-head").innerHTML = data[8].Events;
+          document.getElementById("solo-content").innerHTML = data[8].Description;
+          document.getElementById("solo-loc").getAttributeNode("onclick").value = "location.href='" + data[8].Rulebook_Link + "'";
+
+          document.getElementById("unk-head").innerHTML = data[9].Events;
+          document.getElementById("unk-content").innerHTML = data[9].Description;
+          document.getElementById("unk-loc").getAttributeNode("onclick").value = "location.href='" + data[9].Rulebook_Link + "'";
+
+           document.getElementById("str-head").innerHTML = data[10].Events;
+          document.getElementById("str-content").innerHTML = data[10].Description;
+          document.getElementById("str-loc").getAttributeNode("onclick").value = "location.href='" + data[10].Rulebook_Link + "'";
+
+          // document.getElementById("syn-head").innerHTML = data[11].Events;
+          // document.getElementById("syn-content").innerHTML = data[11].Description;
+          // document.getElementById("syn-loc").getAttributeNode("onclick").value = "location.href='" + data[11].Rulebook_Link + "'"
+          // // for (var i = 9; i < data.length; i++) {
+          //   const node = document.createElement("div");
+          //   const textnode = document.createTextNode([data[i].Name, data[i].Post].join(""));
+          //   node.appendChild(textnode);
+          //   document.getElementById("mood").appendChild(node);
+          // }
+
+        }
+
+
+      </script>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>☹ Alert</h2>
+    </div>
+    <div class="modal-body">
+      <p>Registration Opening Soon!!</p>
+      
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+
+      <div class="two-cards">
+
+        <div class="event-card">
+          <div class="event-img-button one">
+            <div class="event-image event1">
+              <div class="event-description">
+                <p id="ant-content"> </p>
+              </div>
+            </div>
+            <div class="but">
+              <a href="#" id="but-1"><button onclick=""  id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="ant-loc" onclick=""  id="myBtn"> Rulebook </button></a>
+            </div>
+          </div>
+          <div class="event-name" id="ant-head"></div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-img-button two">
+            <div class="event-image event2">
+              <div class="event-description">
+                <p id="eup-content"> </p>
+              </div>
+            </div>
+            <div class="but">
+              <a href="#" id="but-1"><button   id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="eup-loc" onclick=""> Rulebook </button></a>
+            </div>
+          </div>
+          <div class="event-name" id="eup-head"></div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-img-button three">
+            <div class="event-image event3">
+              <div class="event-description">
+                <p id="lenz-content"> </p>
+              </div>
+            </div>
+            <div class="but">
+              <a href="#" id="but-1"><button id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="lenz-loc" onclick=""> Rulebook </button></a>
+            </div>
+          </div>
+          <div class="event-name" id="lenz-head"></div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-img-button four">
+            <div class="event-image event4">
+              <div class="event-description">
+                <p id="nyp-content"> </p>
+              </div>
+            </div>
+            <div class="but">
+              <a href="#" id="but-1"><button   id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="nyp-loc" onclick=""> Rulebook </button></a>
+            </div>
+          </div>
+          <div class="event-name" id="nyp-head"></div>
+        </div>
+
+
+        <div class="event-card">
+          <div class="event-img-button five">
+            <div class="event-image event5">
+              <div class="event-description">
+                <p id="pan-content"> </p>
+              </div>
+            </div>
+            <div class="but">
+              <a href="#" id="but-1"><button   id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="pan-loc" onclick=""> Rulebook </button></a>
+            </div>
+          </div>
+          <div class="event-name" id="pan-head"></div>
+        </div>
+
+
+        <div class="event-card">
+          <div class="event-img-button six">
+            <div class="event-image event6">
+              <div class="event-description">
+                <p id="qui-content"></p>
+              </div>
+            </div>
+            <div class="but">
+              <a href="#" id="but-1"><button   id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="qui-loc" onclick=""> Rulebook </button></a>
+            </div>
+          </div>
+          <div class="event-name" id="qui-head"></div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-img-button six">
+            <div class="event-image event7">
+              <div class="event-description">
+                <p id="skr-content"></p>
+              </div>
+            </div>
+            <div class="but">
+              <a href="#" id="but-1"><button id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="skr-loc" onclick=""> Rulebook </button></a>
+            </div>
+          </div>
+          <div class="event-name" id="skr-head"></div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-img-button six">
+            <div class="event-image event8">
+              <div class="event-description">
+                <p id="rev-content"></p>
+              </div>
+            </div>
+            <div class="but">
+              <a href="#" id="but-1"><button id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="rev-loc" onclick=""> Rulebook </button></a>
+            </div>
+          </div>
+          <div class="event-name" id="rev-head"></div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-img-button six">
+            <div class="event-image event9">
+              <div class="event-description">
+                <p id="solo-content"></p>
+              </div>
+            </div>
+            <div class="but">
+              <a href="#" id="but-1"><button id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="solo-loc" onclick=""> Rulebook </button></a>
+            </div>
+          </div>
+          <div class="event-name" id="solo-head"></div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-img-button six">
+            <div class="event-image event10">
+              <div class="event-description">
+                <p id="str-content"></p>
+              </div>
+            </div>
+            <div class="but">
+              <a href="#" id="but-1"><button id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="str-loc" onclick=""> Rulebook </button></a>
+            </div>
+          </div>
+          <div class="event-name" id="str-head"></div>
+        </div>
+
+        <!-- <div class="event-card">
+          <div class="event-img-button six">
+            <div class="event-image event6">
+              <div class="event-description">
+                <p id="syn-content"></p>
+              </div>
+            </div>
+            <div class="but">
+              <a href="#" id="but-1"><button id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="syn-loc" onclick=""> Rulebook </button></a>
+            </div>
+          </div>
+          <div class="event-name" id="syn-head"></div>
+        </div> -->
+
+        <div class="event-card">
+          <div class="event-img-button six">
+            <div class="event-image event11">
+              <div class="event-description">
+                <p id="unk-content"></p>
+              </div>
+            </div>
+            <div class="but">
+              <a href="#" id="but-1"><button id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="unk-loc" onclick=""> Rulebook </button></a>
+            </div>
+          </div>
+          <div class="event-name" id="unk-head"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <footer>
+    <div class="socials">
+      <h3>Connect with us</h3>
+      <div class="m-20">
+        <div class="socials1">
+          <a href="https://www.instagram.com/blithchron_iitgn/">
+            <li><img src="assets/instagram.svg" width="48px" alt="error" class="social-media"></li>
+          </a>
+          <a href="https://www.youtube.com/user/IITGnBlithchron">
+            <li><img src="assets/ytube.svg" width="48px" alt="error" class="social-media"></li>
+          </a>
+        </div>
+        <div class="socials2">
+          <a href="https://www.facebook.com/Blithchron/">
+            <li><img src="assets/facebook.svg" width="48px" alt="error" class="social-media"></li>
+          </a>
+          <a href="https://twitter.com/blithchroniitgn">
+            <li><img src="assets/linkedin.svg" width="48px" alt="error" class="social-media"></li>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <span class="seperator1"></span>
+
+    <div class="navigate">
+      <h3>Navigate</h3>
+      <ul>
+        <a href="index.html">
+          <li>Home</li>
+        </a>
+        <a href="events.html">
+          <li>Events</li>
+        </a>
+        <a href="sponsors.html">
+          <li>Sponsors</li>
+        </a>
+        <a href="team.html">
+          <li>Our Team</li>
+        </a>
+      </ul>
+    </div>
+    <span class="seperator2"></span>
+    <div class="app">
+      <h3>Our App</h3>
+      <div class="our-app-container">
+        <a href="https://www.facebook.com/Blithchron/">
+          <li><img src="assets/apple.svg" width="48px" alt="" class="social-media"></li>
+        </a>
+        <a href="https://twitter.com/blithchroniitgn">
+          <li><img src="assets/play.svg" width="31px" alt="" class="social-media"></li>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="/script/script.js"></script>
+</body>
+<script>
+
+// Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+        modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+}
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+  if (event.target == modal) {
+          modal.style.display = "none";
+  }
+}
+</script>
+
+</html>

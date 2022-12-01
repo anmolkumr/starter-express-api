@@ -1,0 +1,94 @@
+.pronites {
+  width: 100vw;
+  position: sticky;
+  /* height: 100vh; */
+  height: 100vh;
+  max-height: 100vh;
+  /* display: flex; */
+  /* background-color: #2d305c; */
+  background-image: url(../assets/pronites-moon-stars.png), url(../assets/pronites-bg.png);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  background-color: #2d2f5b;
+  /* width: 100vw; */
+}
+.video-credits{
+  position: relative;
+    
+}
+
+.pronites-bg  {
+ width: 80%;
+}
+.video-mask{
+    position: relative;
+      width: 50%;
+      float: right;
+      top: 69px;
+      margin-right: 7%;
+      border: 3px solid #516aa7;
+      border-radius: 25px;
+      overflow: hidden;
+box-shadow: 0px 4px 65px -20px rgba(191, 191, 191, 0.75);
+  -webkit-box-shadow: 0px 4px 65px -20px rgba(191, 191, 191, 0.75);
+  -moz-box-shadow: 0px 4px 65px -20px rgba(191, 191, 191, 0.75);
+}
+.video {
+  position: relative;
+  left: 0;
+  top: 0;
+  opacity: 1;
+}
+
+.pronites-mobile-bg {
+  display: none;
+}
+
+.bush {
+  position: relative;
+  bottom: 123px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+  /* .pronites {
+    width: 100vw;
+    position: relative;
+    background-image: url(../assets/pronites-mobile-bg.png);
+    display: block;
+    height: 80vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  } */
+
+  /* .pronites-mobile-bg {
+        background-image: url(/assets/pronites-mobile-bg.png);
+        display: block;
+        height: 100vh;
+       
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left;
+
+       
+        bottom: 0;
+    } */
+        .video-mask {
+          position: relative;
+          top: 200px;
+          width: 100%;
+          border-radius: 20px;
+          overflow: hidden;
+          margin: auto;
+        }
+    
+        .video {
+          position: relative;
+          left: 0;
+          top: 0;
+          opacity: 1;
+        }
+}

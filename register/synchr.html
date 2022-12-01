@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antarangee Registration | Blithchron '23 </title>
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+
+<body>
+    <div class="form">
+        <form id="my-form" method="POST"
+            action="https://script.google.com/macros/s/AKfycbxxXxyRyt7fUHAnC38h8auwLek0OZ9AKTZOPr_8VBM_WIb-RlZjXJgKP_Vn3ZBvqEnh/exec">
+            <input class="input" name="Email" type="email" required>
+            <label class="placeholder open-sans bold">Email</label>
+            <br><br>
+            <input class="input font" name="Name" type="text" required>
+            <label class="placeholder  open-sans bold">Name</label>
+            <br><br>
+            <input class="input" name="Whatsapp" type="tel" required>
+            <label class="placeholder open-sans bold">Whatsapp Number</label>
+            <br><br>
+
+            <select name="Role" class="input open-sans bold" required>
+                <option value=""></option>
+                <option value="Karyakarta">Comedy</option>
+                <option value="Sleeper Cell">Serious</option>
+                <option value="Satark Single">Social Message</option>
+
+            </select>
+            <label class="placeholder">Genre of your Nukkad Natak</label>
+            <br><br>
+
+            <select name="Single" class="input open-sans bold" required>
+                <option value="5 - 10">5 - 10</option>
+                <option value="Thoda sa Kata hua">10 - 15</option>
+                <option value="Janmjaat Single">15 - 20</option>
+                <option value="Yogi Ji Fan">20 - 23</option>
+            </select>
+            <label class="placeholder">No. of Participants</label>
+            <br><br>
+            <input type="checkbox" name="TermsAccept" value="Yes" required>
+            <label for="TermsAccept" class="open-sans"> I accept the Terms of <span class="bold">Blithchron, IIT
+                    Gandhinagar</span></label>
+
+            <br><br><button type="submit" onclick="snackbar()">Send</button>
+
+            <div id="snackbar" class="snackbar open-sans"><i
+                    class="fa-solid fa-circle-nodes spin"></i>&nbsp;&nbsp;&nbsp;Processing your Form...</div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

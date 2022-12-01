@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sponsors | Blithchron'23</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blithchron'23 website">
+    <meta property="og:title" content="Blithchron'23 | IIT Gandhinagar">
+    <meta property="og:description" content="Blithchron'23 website">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:site_name" content="Blithchron'23">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .typeanim {
+            /* display: inline-block; */
+            overflow: hidden;
+            white-space: nowrap;
+            animation: example 2s ease-in-out;
+        }
+
+        @keyframes example {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 300px;
+            }
+        }
+
+        .landing-hero {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .landing-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(assets/event_section.png);
+            /* image is only for showing... We will use diff img */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            filter: brightness(100%);
+        }
+
+        .hero-content {
+            position: relative;
+
+            color: steelblue;
+            text-align: center;
+            margin: 0.625rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0;
+        }
+
+        .hero-subtitle {
+            font-size: 2rem;
+            font-weight: 200;
+            margin-top: 1rem;
+        }
+
+        .hero-button {
+            border: none;
+            padding: 20px 40px;
+            background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #939fe4, #8ca4e6, #86a8e7, #86a8e7, #86a8e7, #86a8e7, #86a8e7);
+            color: rgb(255, 255, 255);
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 15px;
+
+        }
+
+        li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 15px;
+        }
+
+        .clouds {
+            position: absolute;
+            top: -100px;
+            animation: 8s ease-in-out infinite alternate cloudmove;
+        }
+
+        .clouds img {
+            overflow: hidden;
+            filter: sepia();
+        }
+
+        @media screen and (min-width:768px) {
+            .clouds {
+                position: absolute;
+                top: -100px;
+                animation: 8s ease-in-out infinite alternate cloudmove;
+            }
+
+            .clouds img {
+                overflow: hidden;
+                filter: sepia();
+            }
+
+            @keyframes cloudmove {
+                from {
+                    left: -500px;
+                }
+
+                to {
+                    left: 200px;
+                    ;
+                }
+            }
+        }
+
+        @keyframes cloudmove {
+            from {
+                left: -200px;
+            }
+
+            to {
+                left: 200px;
+                ;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/jpg" href="assets/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="landing-hero">
+        <div class="hero-content">
+            <div class="clouds">
+                <img src="/assets/Vector.svg" alt="">
+            </div>
+
+            <span class="hero-title typeanim">SPONSORS
+            </span>
+            <h2 class="hero-subtitle">
+                Coming Soon...
+            </h2>
+            <button type="button" class="hero-button" onclick="history.back()">
+                ← Go Back
+            </button><br><br><br><br><br><br><br>
+            <h3>Contact US</h3>
+            <div class="m-20">
+                <a href="https://www.instagram.com/blithchron_iitgn/">
+                    <li><img src="/assets/instagram.svg" width="48px" alt=""></li>
+                </a>
+                <a href="https://www.youtube.com/user/IITGnBlithchron">
+                    <li><img src="/assets/ytube.svg" width="48px" alt=""></li>
+                </a>
+                <a href="https://www.facebook.com/Blithchron/">
+                    <li><img src="/assets/facebook.svg" width="48px" alt=""></li>
+                </a>
+                <a href="https://twitter.com/blithchroniitgn">
+                    <li><img src="/assets/linkedin.svg" width="48px" alt=""></li>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events | Blithchron '23</title>
-    <meta name="description" content="Blithchron'23 website" />
-    <meta property="og:title" content="Blithchron'23 | IIT Gandhinagar" />
-    <meta property="og:description" content="Blithchron'23 website" />
-    <meta property="og:image" content="assets/logo.png"/>
-    <meta property="og:url" content="index.html" />
-    <meta property="og:site_name" content="Blithchron'23" />
+  <meta name="description" content="Blithchron'23 website" />
+  <meta property="og:title" content="Blithchron'23 | IIT Gandhinagar" />
+  <meta property="og:description" content="Blithchron'23 website" />
+  <meta property="og:image" content="assets/logo.png" />
+  <meta property="og:url" content="index.html" />
+  <meta property="og:site_name" content="Blithchron'23" />
   <link rel="stylesheet" href="./style/events.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,14 +22,14 @@
     <nav id="navbar">
       <div class="logo"></div>
       <ul class="nav" id="nav">
-        <li class="menu-item"><a href="index.html" class="nav-item">Home</a></li>
+        <li class="menu-item"><a href="/" class="nav-item">Home</a></li>
         <li class="menu-item">
-          <a href="events.html" class="active nav-item">Events</a>
+          <a href="#" class="active nav-item">Events</a>
         </li>
         <li class="menu-item">
-          <a href="coming-soon.html" class="nav-item">Sponsors</a>
+          <a href="/sponsors" class="nav-item">Sponsors</a>
         </li>
-        <li class="menu-item"><a href="team.html" class="nav-item">Team</a></li>
+        <li class="menu-item"><a href="/team" class="nav-item">Team</a></li>
       </ul>
       <div class="menu" id="menu" onclick="onClickMenu()">
         <div id="bar1" class="bar"></div>
@@ -125,7 +125,7 @@
           document.getElementById("unk-content").innerHTML = data[9].Description;
           document.getElementById("unk-loc").getAttributeNode("onclick").value = "location.href='" + data[9].Rulebook_Link + "'";
 
-           document.getElementById("str-head").innerHTML = data[10].Events;
+          document.getElementById("str-head").innerHTML = data[10].Events;
           document.getElementById("str-content").innerHTML = data[10].Description;
           document.getElementById("str-loc").getAttributeNode("onclick").value = "location.href='" + data[10].Rulebook_Link + "'";
 
@@ -143,24 +143,24 @@
 
 
       </script>
-<div id="myModal" class="modal">
+      <div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>☹ Alert</h2>
-    </div>
-    <div class="modal-body">
-      <p>Registration Opening Soon!!</p>
-      
-    </div>
-    <div class="modal-footer">
-      <h3>Modal Footer</h3>
-    </div>
-  </div>
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>☹ Alert</h2>
+          </div>
+          <div class="modal-body">
+            <p>Registration Opening Soon!!</p>
 
-</div>
+          </div>
+          <div class="modal-footer">
+            <h3>Modal Footer</h3>
+          </div>
+        </div>
+
+      </div>
 
       <div class="two-cards">
 
@@ -172,8 +172,8 @@
               </div>
             </div>
             <div class="but">
-              <a href="#" id="but-1"><button onclick=""  id="myBtn"> Register </button></a>
-              <a href="#" id="but-2"><button id="ant-loc" onclick=""  id="myBtn"> Rulebook </button></a>
+              <a href="#" id="but-1"><button onclick="" id="myBtn"> Register </button></a>
+              <a href="#" id="but-2"><button id="ant-loc" onclick="" id="myBtn"> Rulebook </button></a>
             </div>
           </div>
           <div class="event-name" id="ant-head"></div>
@@ -187,7 +187,7 @@
               </div>
             </div>
             <div class="but">
-              <a href="#" id="but-1"><button   id="myBtn"> Register </button></a>
+              <a href="#" id="but-1"><button id="myBtn"> Register </button></a>
               <a href="#" id="but-2"><button id="eup-loc" onclick=""> Rulebook </button></a>
             </div>
           </div>
@@ -217,7 +217,7 @@
               </div>
             </div>
             <div class="but">
-              <a href="#" id="but-1"><button   id="myBtn"> Register </button></a>
+              <a href="#" id="but-1"><button id="myBtn"> Register </button></a>
               <a href="#" id="but-2"><button id="nyp-loc" onclick=""> Rulebook </button></a>
             </div>
           </div>
@@ -233,7 +233,7 @@
               </div>
             </div>
             <div class="but">
-              <a href="#" id="but-1"><button   id="myBtn"> Register </button></a>
+              <a href="#" id="but-1"><button id="myBtn"> Register </button></a>
               <a href="#" id="but-2"><button id="pan-loc" onclick=""> Rulebook </button></a>
             </div>
           </div>
@@ -249,7 +249,7 @@
               </div>
             </div>
             <div class="but">
-              <a href="#" id="but-1"><button   id="myBtn"> Register </button></a>
+              <a href="#" id="but-1"><button id="myBtn"> Register </button></a>
               <a href="#" id="but-2"><button id="qui-loc" onclick=""> Rulebook </button></a>
             </div>
           </div>
@@ -413,31 +413,31 @@
 </body>
 <script>
 
-// Get the modal
-    var modal = document.getElementById("myModal");
+  // Get the modal
+  var modal = document.getElementById("myModal");
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
 
-      // When the user clicks the button, open the modal 
-      btn.onclick = function() {
-        modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-          modal.style.display = "none";
-}
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-  if (event.target == modal) {
-          modal.style.display = "none";
+  // When the user clicks the button, open the modal 
+  btn.onclick = function () {
+    modal.style.display = "block";
   }
-}
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 </script>
 
 </html>

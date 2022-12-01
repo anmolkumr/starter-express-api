@@ -1,0 +1,27 @@
+.bItem {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 9px;
+    bottom: 0;
+    left: 9px;
+    padding: 18px;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(http://kenwheeler.github.io/slick/img/fonz1.png);
+}
+
+.bItem:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+}
+h3{
+    z-index: 2;
+}

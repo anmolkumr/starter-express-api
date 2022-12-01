@@ -21,19 +21,19 @@ app.get('', (req, res) => {
 })
 
 app.get('/events', (req, res) => {
-    res.sendFile(__dirname + '/events.html')
+    res.sendFile(__dirname + '/views/events.html')
 })
 
 app.get('/sponsors', (req, res) => {
-    res.sendFile(__dirname + '/coming-soon.html')
+    res.sendFile(__dirname + '/views/coming-soon.html')
 })
 
 app.get('/registration', (req, res) => {
-    res.sendFile(__dirname + '/register.html')
+    res.sendFile(__dirname + '/views/register.html')
 })
 
 app.get('/team', (req, res) => {
-    res.sendFile(__dirname + '/team.html')
+    res.sendFile(__dirname + '/views/team.html')
 })
 
 // app.get('/ContactUs', (req, res) => {

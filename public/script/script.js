@@ -4,7 +4,7 @@ function reveal() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+    var elementVisible = 100;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("reactive");
@@ -242,7 +242,7 @@ if (wideScreen.matches) {
         $indicator3.addClass("animateBg");
         $indicator4.addClass("animate");
         document.getElementById("more").getAttributeNode("onclick").value =
-          "location.href='events.html'";
+          "location.href='\/events'";
       } else {
         $indicator3.removeClass("animateBg");
         $indicator4.removeClass("animate");

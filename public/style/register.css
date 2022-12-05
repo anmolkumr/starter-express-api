@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.e-img{
+    background-image: url("https://raw.githubusercontent.com/anmolkumr/blith-assets/cecff147c33546d6ed5787c4c82da62330cfe0e5/assets/IMG_2087.JPG");
+    height: 100vh;
+    background-size: cover;
+    background-position: right;
+}
+.e-img::after{
+    content: '';
+    position: relative;
+    top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    background: linear-gradient(to right, transparent 30%, black 110%);
+}
+.e-img-txt{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    filter: brightness(300%);
+    color: white;
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    right: 0;
+    z-index: 2;
+
+}
+.e-img1 {
+    background-image: url("https://raw.githubusercontent.com/anmolkumr/blith-assets/cecff147c33546d6ed5787c4c82da62330cfe0e5/assets/IMG_2087.JPG");
+    height: 100vh;
+    background-size: cover;
+    background-position: right;
+}
+
+.e-img1::after {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, transparent 30%, black 110%);
+}
+
+.e-img1-txt {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    filter: brightness(300%);
+    color: white;
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    right: 0;
+    z-index: 2;
+
+}

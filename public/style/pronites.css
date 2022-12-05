@@ -39,6 +39,7 @@ box-shadow: 0px 4px 65px -20px rgba(191, 191, 191, 0.75);
   left: 0;
   top: 0;
   opacity: 1;
+  height: 500px;
 }
 
 .pronites-mobile-bg {
@@ -47,7 +48,8 @@ box-shadow: 0px 4px 65px -20px rgba(191, 191, 191, 0.75);
 
 .bush {
   position: relative;
-  bottom: 123px;
+  /* bottom: 123px; */
+  /* background-image: url(../assets/bush_transition.svg); */
   background-repeat: no-repeat;
   background-position: center;
 }

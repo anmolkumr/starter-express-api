@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Pure CSS Gradient Background Animation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://codepen.io/P1N2O/pen/xxbjYqx.css'>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+
+        .text {
+            font: 4em/1 Open Sans, Impact;
+            text-transform: uppercase;
+            fill: none;
+            stroke-width: 2;
+            stroke-linejoin: round;
+            stroke-dasharray: 70 330;
+            stroke-dashoffset: 6;
+            -webkit-animation: stroke 6s infinite linear;
+            animation: stroke 6s infinite linear;
+        }
+
+        .text:nth-child(5n + 1) {
+            stroke: #ff5877;
+            -webkit-animation-delay: -1.2s;
+            animation-delay: -1.2s;
+        }
+
+        .text:nth-child(5n + 2) {
+            stroke: #f59803;
+            -webkit-animation-delay: -2.4s;
+            animation-delay: -2.4s;
+        }
+
+        .text:nth-child(5n + 3) {
+            stroke: #E9F1DF;
+            -webkit-animation-delay: -3.6s;
+            animation-delay: -3.6s;
+        }
+
+        .text:nth-child(5n + 4) {
+            stroke: #56D9CD;
+            -webkit-animation-delay: -4.8s;
+            animation-delay: -4.8s;
+        }
+
+        .text:nth-child(5n + 5) {
+            stroke: #ffa01b;
+            -webkit-animation-delay: -6s;
+            animation-delay: -6s;
+        }
+
+        @-webkit-keyframes stroke {
+            100% {
+                stroke-dashoffset: -400;
+            }
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: -400;
+            }
+        }
+
+        /* Other styles */
+
+        html,
+        body {
+            /* height: 100%; */
+        }
+
+        body {
+            /* background: #111; */
+            /* background-size: .2em 100%; */
+
+            margin: 0;
+            background-image: linear-gradient(to bottom, #2350c7, #2047ae, #1d3e95, #1c367d, #1a2d66);
+
+            background-size: 100vh 100vh;
+            color: aliceblue;
+        }
+
+        svg {
+            position: absolute;
+            width: 80%;
+            margin: 0;
+                 left: 52px;
+            border:2px solid black;
+                /* height: 100%; */
+        }
+
+        .fade-in-text:nth-child(1) {
+            opacity: 0;
+            transition: opacity 1s;
+            transition-delay: 0.5s;
+        }
+
+
+        .fade-in-text:nth-child(2) {
+            opacity: 0;
+            transition: opacity 1s;
+            transition-delay: 1s;
+        }
+
+        .fade-in-text:nth-child(3) {
+            opacity: 0;
+            transition: opacity 1s;
+            transition-delay: 1.5s;
+            display: block;
+        }
+
+        .fade-in-text:nth-child(4) {
+            opacity: 0;
+            transition: opacity 1s;
+            transition-delay: 2.2s;
+        }
+
+        .fade-in-text:nth-child(5) {}
+
+        .container {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            /* justify-items: center; */
+            /* justify-content: center; */
+            align-items: ;
+            align-content: unset;
+        }
+
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .fade-in-text p {
+            font-size: 45px;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body onload='loading()'>
+    <div class="container">
+        <div class="fade-in-text" id="1">
+            <p>we</p>
+        </div>
+        <div class="fade-in-text" id="2">
+            <p>are</p>
+        </div>
+        <div class="fade-in-text" id="3">
+            <p>launching Soon!!!</p>
+        </div>
+
+        <div class="fade-in-text" id="4">
+            <svg viewBox="0 0 600 100">
+                <symbol id="s-text">
+                    <text text-anchor="middle" x="50%" y="50%" dy=".35em">
+                        Blithchron '23
+                    </text>
+                </symbol>
+                <!-- Duplicate symbols -->
+                <use xlink:href="#s-text" class="text"></use>
+                <use xlink:href="#s-text" class="text"></use>
+                <use xlink:href="#s-text" class="text"></use>
+                <use xlink:href="#s-text" class="text"></use>
+                <use xlink:href="#s-text" class="text"></use>
+            </svg>
+        </div>
+    </div>
+    <script>
+        function loading() {
+            document.getElementById('1').style.opacity = '1';
+            document.getElementById('2').style.opacity = '1';
+            document.getElementById('3').style.opacity = '1';
+            document.getElementById('4').style.opacity = '1';
+            document.getElementById('5').style.opacity = '1';
+
+        }
+    </script>
+</body>
+
+</html>

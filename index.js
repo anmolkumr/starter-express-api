@@ -1,8 +1,8 @@
-
+// const compression = require('compression')
 const express = require('express')
 const app = express()
 const port = 5000
-
+// app.use(compression());
 // Static Files
 app.use(express.static('public'));
 // Specific folder example
@@ -16,7 +16,7 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 
 // Navigation
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index', { text: 'Hey' })
 })
 
@@ -28,6 +28,9 @@ app.get('/sponsors', (req, res) => {
     res.sendFile(__dirname + '/views/coming-soon.html')
 })
 
+app.get('/coming', (req, res) => {
+    res.sendFile(__dirname + '/views/coming.html')
+})
 app.get('/registration', (req, res) => {
     res.sendFile(__dirname + '/views/register.html')
 })

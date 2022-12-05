@@ -218,7 +218,7 @@ body {
 
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 36px;
     line-height: 64px;
     text-align: center;
     color: #000000;
@@ -344,20 +344,18 @@ body {
     background-color: #f2fffa;
 }
 
-.reveal {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
-}
-
-.reveal.reactive {
-    transform: translateY(0);
-    opacity: 1;
-}
-
 @media screen and (max-width:768px) {
+.reveal {
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: 1s all ease;
+    }
 
+    .reveal.reactive {
+        transform: translateY(0);
+        opacity: 1;
+    }
     nav {
         height: 60px;
         width: 100%;
@@ -499,7 +497,7 @@ body {
         height: 200px;
         float: right;
         width: 60%;
-        /* padding: 12px 5% 0 5%; */
+        padding: 12px 5% 0 5%;
         text-align: center;
     }
 
@@ -585,27 +583,27 @@ body {
     }
 
     .event-card:nth-child(6) {
-        background-color: #E6E6FA;
+        background-color: #faece6;
     }
 
     .event-card:nth-child(7) {
-        background-color: #E6E6FA;
+        background-color: #caddf1;
     }
 
     .event-card:nth-child(8) {
-        background-color: #E6E6FA;
+        background-color: #e2d4ff;
     }
 
     .event-card:nth-child(9) {
-        background-color: #E6E6FA;
+        background-color: #dfdfff;
     }
 
     .event-card:nth-child(10) {
-        background-color: #E6E6FA;
+        background-color: #f1caee;
     }
 
     .event-card:nth-child(11) {
-        background-color: #E6E6FA;
+        background-color: #f1d0ca;
 
     }
 
@@ -1594,71 +1592,73 @@ p a {
     }
 
     .event2 {
-        background-image: url('https://raw.githubusercontent.com/anmolkumr/blith-assets/main/assets/euphony_light.png');
+        background-image: url('../assets/coming-soon.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
+        filter: saturate(110%);
     }
 
     .event3 {
-        background-image: url('https://blithchron.iitgn.ac.in/img/lenz-logo-light.png');
+        background-image: url('../assets/coming-soon.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
     }
 
     .event4 {
-        background-image: url('https://blithchron.iitgn.ac.in/img/byp_logo_withoutblith.png');
+        background-image: url('https://raw.githubusercontent.com/anmolkumr/blith-assets/main/assets/euphony_light.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
+
     }
 
     .event5 {
-        background-image: url('https://raw.githubusercontent.com/anmolkumr/blith-assets/main/assets/Antaragnee.png');
-        background-size: contain;
+        background-image: url('https://raw.githubusercontent.com/anmolkumr/blith-assets/main/assets/quizzitch-light.png');
+        background-size: calc(80%);
         background-repeat: no-repeat;
         background-position: center center;
     }
 
     .event6 {
-        background-image: url('https://blithchron.iitgn.ac.in/img/reverbwhitephoto.png');
+        background-image: url('../assets/reverb.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
     }
 
     .event7 {
-        background-image: url('../assets/coming-soon.svg');
+        background-image: url('https://raw.githubusercontent.com/anmolkumr/blith-assets/main/assets/skirmish_light(_transparent.png)');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
     }
 
     .event8 {
-        background-image: url('../assets/coming-soon.svg');
+        background-image: url('../assets/coming-soon.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
     }
 
     .event9 {
-        background-image: url('../assets/coming-soon.svg');
+        background-image: url('../assets/coming-soon.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
     }
 
     .event10 {
-        background-image: url('../assets/coming-soon.svg');
+        background-image: url('https://raw.githubusercontent.com/anmolkumr/blith-assets/main/assets/unkahi_logo%20transparent-01%20(1).png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
     }
 
     .event11 {
-        background-image: url('../assets/coming-soon.svg');
-        background-size: cover;
+        background-image: url('https://raw.githubusercontent.com/anmolkumr/blith-assets/main/assets/synchronize_light_withoutBG%20(1).png');
+        background-size: calc(80%);
         background-repeat: no-repeat;
         background-position: center center;
     }
@@ -1671,8 +1671,8 @@ p a {
     }
 
     .event7 {
-        background-image: url('../assets/coming-soon.svg');
-        background-size: cover;
+        background-image: url('../assets/skirmish_light_trans.png');
+        background-size: calc(80%);
         background-repeat: no-repeat;
         background-position: center center;
     }

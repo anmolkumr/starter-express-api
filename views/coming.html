@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blithchron'23 | Coming Soon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blithchron'23 website">
+    <meta property="og:title" content="Blithchron'23 | IIT Gandhinagar">
+    <meta property="og:description" content="Blithchron'23 website">
+    <meta property="og:image" content="assets/logo.jpg">
+    <link rel="icon" type="image/jpg" href="assets/logo.jpg">
+    <meta property="og:site_name" content="Blithchron'23">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            /* overflow: hidden; */
+        }
+
+        .typeanim {
+            /* display: inline-block; */
+            overflow: hidden;
+            white-space: nowrap;
+            animation: example 2s ease-in-out;
+        }
+
+        @keyframes example {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 300px;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .landing-hero {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+
+            opacity: 0;
+            transition: opacity 0.7s;
+            transition-delay: 0.3s;
+
+        }
+
+        .landing-hero::before {
+
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://raw.githubusercontent.com/anmolkumr/blith-assets/main/assets/events-bg.png');
+            /* image is only for showing... We will use diff img */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            filter: saturate(140%);
+        }
+
+        .hero-content {
+            position: relative;
+
+            color: rgb(28, 104, 166);
+            text-align: center;
+            /* margin: 0.625rem; */
+        }
+
+        .hero-title {
+            /* opacity: 0; */
+            font-weight: 800;
+            margin-bottom: 0;
+
+            opacity: 0;
+            transition: opacity 1s;
+            transition-delay: 1s;
+        }
+
+        .hero-subtitle {
+            font-size: 2rem;
+            font-weight: 200;
+            margin-top: 1rem;
+
+
+        }
+
+        .We:nth-child(1) {
+            opacity: 0;
+            transition: opacity 0.7s;
+            transition-delay: 1.5s;
+        }
+
+
+        .We:nth-child(2) {
+            opacity: 0;
+            transition: opacity 0.7s;
+            transition-delay: 1.8s;
+        }
+
+        .We:nth-child(3) {
+            opacity: 0;
+            transition: opacity 0.7s;
+            transition-delay: 2.1s;
+        }
+
+        .We:nth-child(4) {
+            opacity: 0;
+            transition: opacity 0.7s;
+            transition-delay: 2.4s;
+        }
+
+        .We:nth-child(5) {
+            opacity: 0;
+            transition: opacity 0.7s;
+            transition-delay: 2.7s;
+        }
+
+        .We:nth-child(6) {
+            opacity: 0;
+            transition: opacity 0.7s;
+            transition-delay: 3s;
+        }
+
+        .We:nth-child(7) {
+            opacity: 0;
+            transition: opacity 0.7s;
+            transition-delay: 3.3s;
+        }
+
+        .We:nth-child(8) {
+            opacity: 0;
+            transition: opacity 0.7s;
+            transition-delay: 3.6s;
+        }
+
+        .cont {
+            opacity: 0;
+            transition: opacity 0.7s;
+            transition-delay: 3.9s;
+        }
+
+        .hero-button {
+            border: none;
+            padding: 20px 40px;
+            background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #939fe4, #8ca4e6, #86a8e7, #86a8e7, #86a8e7, #86a8e7, #86a8e7);
+            color: rgb(255, 255, 255);
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 15px;
+
+        }
+
+        li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 15px;
+        }
+
+        .clouds {
+            display: none;
+            position: absolute;
+            top: -100px;
+            animation: 8s ease-in-out infinite alternate cloudmove;
+        }
+
+        .clouds img {
+            overflow: hidden;
+            filter: sepia();
+        }
+
+        .text {
+           
+            /* font:4em/1 'Poppins', sans-serif; */
+            font:4em/1 'Anton', sans-serif;
+
+            text-transform: uppercase;
+            fill: none;
+            stroke-width: 2;
+            stroke-linejoin: round;
+            stroke-dasharray: 70 330;
+            stroke-dashoffset: 6;
+            -webkit-animation: stroke 6s infinite linear;
+            animation: stroke 6s infinite linear;
+        }
+
+        .text:nth-child(5n + 1) {
+            stroke: #ff5877;
+            -webkit-animation-delay: -1.2s;
+            animation-delay: -1.2s;
+        }
+
+        .text:nth-child(5n + 2) {
+            stroke: #0394f5;
+            -webkit-animation-delay: -2.4s;
+            animation-delay: -2.4s;
+        }
+
+        .text:nth-child(5n + 3) {
+            stroke: #623403;
+            -webkit-animation-delay: -3.6s;
+            animation-delay: -3.6s;
+        }
+
+        .text:nth-child(5n + 4) {
+            stroke: #3a928b;
+            -webkit-animation-delay: -4.8s;
+            animation-delay: -4.8s;
+        }
+
+        .text:nth-child(5n + 5) {
+            stroke: #ffa01b;
+            -webkit-animation-delay: -6s;
+            animation-delay: -6s;
+        }
+
+        @-webkit-keyframes stroke {
+            100% {
+                stroke-dashoffset: -400;
+            }
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: -400;
+            }
+        }
+
+        svg {
+            margin: 0;
+            left: 52px;
+
+        }
+
+        @media screen and (max-width:768px) {
+            .landing-hero {
+                display: flex;
+
+            }
+            .text{
+                font:6em/1 'Anton', sans-serif;
+                stroke-width: 3;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                font-weight: 200;
+                margin-top: 1rem;
+
+            }
+            
+
+            .landing-hero::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                /* height: 100%; */
+                /* background: url(https://raw.githubusercontent.com/anmolkumr/blith-assets/main/assets/events-bg.png); */
+                /* background-repeat: no-repeat; */
+                background-size: contain;
+                background-position: bottom center;
+                /* filter: saturate(140%); */
+                background-color: #d4ebf6;
+            }
+        }
+
+
+            @media screen and (min-width:768px) {
+                .clouds {
+                    display: none;
+                    position: absolute;
+                    top: -100px;
+                    animation: 8s ease-in-out infinite alternate cloudmove;
+                }
+
+                .clouds img {
+                    overflow: hidden;
+                    filter: sepia();
+                }
+
+                @keyframes cloudmove {
+                    from {
+                        left: -500px;
+                    }
+
+                    to {
+                        left: 200px;
+                        ;
+                    }
+                }
+            }
+
+            @keyframes cloudmove {
+                from {
+                    left: -200px;
+                }
+
+                to {
+                    left: 200px;
+                    ;
+                }
+            }
+    </style>
+    <link rel="icon" type="image/jpg" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body onload='loading()'>
+    <section class="landing-hero" id="3">
+        <div class="hero-content">
+            <div class="hero-title fade-in-text" id="1">
+
+                <svg viewBox="0 0 600 100">
+                    <symbol id="s-text">
+                        <text text-anchor="middle" x="50%" y="50%" dy=".35em">
+                            Blithchron '23
+                        </text>
+                    </symbol>
+                    <!-- Duplicate symbols -->
+                    <use xlink:href="#s-text" class="text"></use>
+                    <use xlink:href="#s-text" class="text"></use>
+                    <use xlink:href="#s-text" class="text"></use>
+                    <use xlink:href="#s-text" class="text"></use>
+                    <use xlink:href="#s-text" class="text"></use>
+                </svg>
+            </div>
+
+            <h2 class="hero-subtitle" id="2">
+                <span class="We" id="4">We </span><span class="We" id="5"> are</span><span class="We" id="6">
+                    Launching</span><span class="We" id="7"> Soon</span>
+                <span class="We" id="8">.</span><span class="We" id="9">.</span><span class="We" id="10">.</span>
+            </h2>
+
+
+            <br><br><br><br>
+            <div id="11" class="cont">
+
+                <h2>Contact Us</h2>
+                <div class="m-20">
+                    <a href="https://www.instagram.com/blithchron_iitgn/">
+                        <li><img src="/assets/instagram.svg" id="logo" style="width:48px" alt=""></li>
+                    </a>
+                    <a href="https://www.youtube.com/user/IITGnBlithchron">
+                        <li><img src="/assets/ytube.svg" id="logo1" style="width:48px" alt=""></li>
+                    </a>
+                    <a href="https://www.facebook.com/Blithchron/">
+                        <li><img src="/assets/facebook.svg" id="logo2" style="width:48px" alt=""></li>
+                    </a>
+                    <a href="https://twitter.com/blithchroniitgn">
+                        <li><img src="/assets/linkedin.svg" id="logo3" style="width:48px" alt=""></li>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+         
+        function loading() {
+            var w = window.innerWidth;
+            if (w < 768) {
+                document.getElementById("logo").style.width ="30px";
+                document.getElementById("logo1").style.width = "30px";
+                document.getElementById("logo2").style.width = "30px";
+                document.getElementById("logo3").style.width = "30px";
+            }
+            // document.getElementById('1').style.opacity = '1';
+            // document.getElementById('2').style.opacity = '1';
+            // document.getElementById('3').style.opacity = '1';
+            // document.getElementById('4').style.opacity = '1';
+            // document.getElementById('5').style.opacity = '1';
+            // document.getElementById('6').style.opacity = '1';
+            // document.getElementById('7').style.opacity = '1';
+            // document.getElementById('8').style.opacity = '1';
+            // document.getElementById('9').style.opacity = '1';
+            // document.getElementById('10').style.opacity = '1';
+            // document.getElementById('11').style.opacity = '1';
+            for (let i = 1; i < 13; i++) {
+                document.getElementById(i).style.opacity = '1';
+
+            }
+           
+
+        }
+        
+    </script>
+</body>
+
+</html>
